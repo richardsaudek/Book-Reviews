@@ -1,0 +1,63 @@
+body {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+}
+input {
+  padding: 8px;
+  border-radius: 1px;
+  border-radius: 1%;
+  margin: 5px;
+}
+button {
+  text-transform: uppercase;
+  border: 1px solid rgb(34, 10, 191);
+  background-color: #3e9aa6;
+  padding: 8px;
+  border-radius: 14%;
+
+}
+img {
+  height: 200px;
+  border-radius: 50%;
+}
+.search-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  row-gap: 10px;
+  column-gap: 10px;
+
+}
+.bookBox {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  width: 250px;
+
+}
+.img{
+  height: 300px;
+  width: 200px;
+  object-fit: cover;
+}
+.bookBox{
+  width: 300px;
+  font-weight: bold;
+  display: inline;
+  align-content: center;
+}

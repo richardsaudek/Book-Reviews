@@ -1,0 +1,11 @@
+@base = https://api.nytimes.com/svc/books/v3
+@query = ?api-key=E1a7bAdoiHcGemouHZDyd8bfEwS3tUNd
+
+GET {{base}}/lists/names.json{{query}}
+###
+
+GET {{base}}/lists/hardcover-fiction.json{{query}}
+###
+GET {{base}}/lists/reviews/author.json{{query}}
+###
+GET {{base}}/lists/best-sellers/history.json{{query}}
