@@ -1,32 +1,45 @@
-const DOMAIN = 'https://api.nytimes.com/svc/books/v3';
-const QUERY = "?api-key=E1a7bAdoiHcGemouHZDyd8bfEwS3tUNd"
+const DOMAIN = 'https://api.nytimes.com/svc/books/v3/reviews.json?';
+const QUERY = "api-key=E1a7bAdoiHcGemouHZDyd8bfEwS3tUNd"
 
 const button = document.querySelector("button")
 const listing = document.querySelector(".book-list")
+ 
 
+async function getAuthor(book_author) {
+ 
+  const url = `${DOMAIN}author=${book_author}&${QUERY}`;
 
-button.addEventListener("click", () => {
-  const bookList = document.getElementById("blank").value;
-  searchApi(bookList)
-})
-
-
-async function api() {
-  const url = `${DOMAIN}/lists/best-sellers/history.json${QUERY}`;
-  const res = await fetch(url)
-  const json = await res.json()
-  console.log(`This is the result of the API function`);
-  console.log(json);
-  return json
+  try {
+    const res = await fetch(`${url}`)
+    const json = await res.json()
+    console.log(json);
+    return json;
+  } catch (error) {
+  
+  }
 }
-const throttledApi = _.throttle(api, 1000)
-throttledApi();
+getAuthor('stephen king')
 
-// async function renderList(json) {
+  // async function
+  //   const res = await 'https://api.nytimes.com/svc/books/v3/reviews.json'
+  // const json = res.json()
+  //   return json
 
-
-  // listing.innerHTML = ""
-  // for (let list_name of json.Search) {
-  //   let displayName = listing.display_name;
+  // async function api(author) {
+  //   const url = `${DOMAIN}/reviews.json${QUERY}`;
+  //   const res = await fetch(url)
+  //   const json = await res.json()
+  //   console.log(`This is the result of the API function`);
+  //   console.log(json);
+  //   return json
+  //   console.log('Haruki Murakami');
   // }
-}
+//   const throttledApi = _.throttle(api, 1000)
+//   throttledApi();
+  
+//   button.addEventListener("click"), () => {
+//     const bookList = document.getElementById("blank").value;
+//     searchApi(bookList)
+//   }
+// }
+  // async function renderList(json) {
