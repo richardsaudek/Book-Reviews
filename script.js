@@ -4,7 +4,7 @@ const QUERY = "api-key=E1a7bAdoiHcGemouHZDyd8bfEwS3tUNd"
 // throttledApi();
 const button = document.querySelector("button")
 //let theText = <input>("")</input>;
-const span = document.querySelector("span")
+const span1 = document.querySelector("span1")
 const listing = document.querySelector(".book-list")
 const test = document.querySelector("#test")
 console.log(test);
@@ -21,71 +21,65 @@ button.addEventListener("click", () => {
       const results = await fetch(`${url}`)
       const json = await results.json()
       console.log(json);
+      
 for (let index = 0; index < 10; index++) {
   const bookbox = document.createElement("div");
   bookbox.classList.add("bookBox");
-
-  const subtitle = document.createElement("div")
-  subtitle.textContent = json.results[index].url
-  bookbox.appendChild(subtitle)
-
-  
-  const authorinfo = document.createElement("div")
-  // authorinfo.textContent = json.results[index].book_author
-  bookbox.appendChild(authorinfo)
   
   const titleinfo = document.createElement("div")
   titleinfo.textContent = json.results[index].book_title
   bookbox.appendChild(titleinfo)
-  
+
+  const url = document.createElement("div")
+  url.textContent = json.results[index].url
+  bookbox.appendChild(url)
+
   const summaryinfo = document.createElement("div")
   summaryinfo.textContent = json.results[index].summary
   bookbox.appendChild(summaryinfo)
+  
+  // const authorinfo = document.createElement("div")
+  // // authorinfo.textContent = json.results[index].book_author
+  // bookbox.appendChild(authorinfo)
+  
+  
 
-  const urlinfo = document.createElement("div")
-  urlinfo.textContent = json.results[index].url
-  bookbox.appendChild(urlinfo)
+  // const urlinfo = document.createElement("div")
+  // urlinfo.textContent = json.results[index].url
+  // bookbox.appendChild(urlinfo)
 
   output.appendChild(bookbox)
 
-
-
-
-
-  span.innerHTML = json.results[index].book_author
-
-  
-}
-
-  
+  span1.innerHTML = json.results[index].book_author
+} 
     }
     catch (error) {
     }
-  }
-
-
-
-
-
-  // async function renderList(json) {
-  //   listing.innerHTML = ""
-  //   for (let book of json.Search) {
-  //     let Title = book.Title;
-  //     let Author = book.Author
-  //     let NYTimesReview = book.Review
-  //     let Summary = book.Summary
     
-  //     const div = document.createElement('div');
-  //     const titleBox = document.createElement('p');
-  //     const img = document.createElement(`img`)
-  
-  //     div.classList.add("bookBox")
-  //     img.classList.add('img')
-  //     titleBox.classList.add("titleBox")
+    }
+function renderList(json) {
+  listing.innerHTML = ""
+  for (let movie of json.Search) {
+    let Title = titleinfo;
+    let Summary = summaryinfo
+    let Link = url
+      
+    const div = document.createElement('div');
+    const titleBox = document.createElement('p');
+    const img = document.createElement(`img`)
+  }
+}
 
-  //     // getAuthor('Haruki Murakami')
-  //   }
-  //   renderList(json)
-  // }
+    // div.classList.add("bookBox")
+    // img.classList.add('url')
+    // titleBox.classList.add("titleBox")
+    
+    // titleBox.textContent = `${Title} ${releaseYear}`
+    // img.src = `${Poster}`
+    // listing.append(div);
+    // div.appendChild(img);
+    // div.appendChild(titleBox);
+    
+
 
 
