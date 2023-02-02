@@ -2,7 +2,6 @@ const DOMAIN = 'https://api.nytimes.com/svc/books/v3/reviews.json?';
 const QUERY = "api-key=E1a7bAdoiHcGemouHZDyd8bfEwS3tUNd"
 // const throttledApi = _.throttle(api, 1000)
 // throttledApi();
-
 const button = document.querySelector("button")
 //let theText = <input>("")</input>;
 const span = document.querySelector("span")
@@ -22,23 +21,35 @@ button.addEventListener("click", () => {
       const results = await fetch(`${url}`)
       const json = await results.json()
       console.log(json);
-for (let index = 0; index < json.results.length; index++) {
+for (let index = 0; index < 10; index++) {
+  const bookbox = document.createElement("div");
+  bookbox.classList.add("bookBox");
+
+  const subtitle = document.createElement("div")
+  subtitle.textContent = json.results[index].url
+  bookbox.appendChild(subtitle)
+
   
   const authorinfo = document.createElement("div")
   // authorinfo.textContent = json.results[index].book_author
-  output.appendChild(authorinfo)
+  bookbox.appendChild(authorinfo)
   
   const titleinfo = document.createElement("div")
   titleinfo.textContent = json.results[index].book_title
-  output.appendChild(titleinfo)
+  bookbox.appendChild(titleinfo)
   
   const summaryinfo = document.createElement("div")
   summaryinfo.textContent = json.results[index].summary
-  output.appendChild(summaryinfo)
+  bookbox.appendChild(summaryinfo)
 
   const urlinfo = document.createElement("div")
   urlinfo.textContent = json.results[index].url
-  output.appendChild(urlinfo)
+  bookbox.appendChild(urlinfo)
+
+  output.appendChild(bookbox)
+
+
+
 
 
   span.innerHTML = json.results[index].book_author
@@ -51,6 +62,11 @@ for (let index = 0; index < json.results.length; index++) {
     catch (error) {
     }
   }
+
+
+
+
+
   // async function renderList(json) {
   //   listing.innerHTML = ""
   //   for (let book of json.Search) {

@@ -1,4 +1,11 @@
+*{
+  box-sizing: border-box;
+}
 body {
+  background-image: url("thought-catalog-o0Qqw21-0NI-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   text-align: center;
   height: 100vh;
   width: 100vw;
@@ -18,9 +25,18 @@ button {
 
 }
 img {
-  height: 200px;
+  
+  height: 175px;
   border-radius: 50%;
 }
+
+section {
+  margin: 40px 0;
+}
+/* div {
+  background-color: antiquewhite;
+} */
+
 .search-section {
   display: flex;
   justify-content: center;
@@ -39,28 +55,44 @@ img {
   column-gap: 10px;
 
 }
-#test{
+
   
+
+#output{
+  background: rgb(242, 243, 245, 0.4);
+  display: flex;
+  gap: 24px;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  margin: 40px 24px;
 }
-.bookBox {
+/* .bookBox {
   display: flex;
   flex-direction: column;
   margin: 20px;
   padding: 10px;
   justify-content: center;
   align-items: center;
-  height: 350px;
   width: 250px;
-
-}
+  
+} */
 .img{
   height: 300px;
   width: 200px;
   object-fit: cover;
 }
 .bookBox{
-  width: 300px;
+  /* width: 90%; */
+  height: 350px;
   font-weight: bold;
-  display: inline;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-content: center;
+  /* background-color: firebrick; */
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  border-radius: 8px;
+  /* margin: 20px; */
+  flex-grow: 1;
+  width: 25%
 }
