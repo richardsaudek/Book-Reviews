@@ -1,6 +1,8 @@
 *{
   box-sizing: border-box;
 }
+@import 'https://fonts.googleapis.com/css?family=BioRhyme:700|Eczar:800|Rubik:400,400i,700';
+
 body {
   background-image: url("thought-catalog-o0Qqw21-0NI-unsplash.jpg");
   background-position: center;
@@ -9,15 +11,35 @@ body {
   text-align: center;
   height: 100vh;
   width: 100vw;
+  background-color:  #fcfce1;
+  font-family: Rubik, sans-serif;
+  font-weight: 400;
 }
 h1 {
-  size: 120%;
-  font-family: 'Courier New', Courier, monospace;
+  /* size: 120%; */
+  /* font-family: 'BioRhyme', serif;
+    font-size: 5em;
+    font-weight: 700;
+    color: #ff7474; */
+    font-family: 'BioRhyme', serif;
+    font-size: 5em;
+    font-weight: 700;
+    color: #ff7474;
+}
+div2 {
+  margin: 0 20%;
+
 }
 h2 {
-  color: antiquewhite;
   font-weight: bolder;
-  background-color: black;
+  /* background-color: #fcfce1; */
+  font-family: Eczar, serif;
+  font-weight: 800;
+  font-size: 3em;
+  margin-bottom: 0em;
+  color: rgb(0,200,215);
+  text-align: center;
+  
 }
 input {
   padding: 8px;
@@ -35,9 +57,9 @@ button {
 
 }
 img {
-max-width: 25%;
+/* max-width: 25%; */
   /* max-height: 30px ; */
-  border-radius: 50%;
+  /* border-radius: 100%; */
 }
 
 section {
@@ -67,9 +89,7 @@ section {
   column-gap: 10px;
 
 }
-
 #output{
-  background: rgb(242, 243, 245);
   display: flex;
   gap: 24px;
   /* flex-direction: column; */
@@ -93,16 +113,24 @@ section {
 }
 .bookBox{
   /* width: 90%; */
-  height: 350px;
+  background: rgb(242, 243, 245);
+  min-height: 350px;
   font-weight: bold;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
+  /* align-content: center; */
+  align-items: center;
   /* background-color: firebrick; */
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   border-radius: 8px;
   /* margin: 20px; */
   flex-grow: 1;
-  width: 25%
+  width: 25%;
+  padding: 24px;
+}
+.bookImg{
+  height:300px;
+  width: 200px;
+  object-fit: cover;
 }
