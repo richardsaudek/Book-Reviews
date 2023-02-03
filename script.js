@@ -58,7 +58,11 @@ async function getAuthor(book_author) {
   catch (error) {
   }
 }
-
+if (condition) {
+  
+} else {
+  
+}
 // const authorinfo = document.createElement("div")
 // // authorinfo.textContent = json.results[index].book_author
 // bookbox.appendChild(authorinfo)
