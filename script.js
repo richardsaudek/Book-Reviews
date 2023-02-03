@@ -1,5 +1,8 @@
 const DOMAIN = 'https://api.nytimes.com/svc/books/v3/reviews.json?';
 const QUERY = "api-key=E1a7bAdoiHcGemouHZDyd8bfEwS3tUNd"
+const OVERVIEW_API = '/lists/overview.json?';
+const IMAGE_API = 'list_image'
+
 // const throttledApi = _.throttle(api, 1000)
 // throttledApi();
 const button = document.querySelector("button")
@@ -15,12 +18,23 @@ button.addEventListener("click", () => {
   getAuthor(bookTitle)
   
 })
+async function getBookImage(list_image)
+const urlImage = `${DOMAIN}author=${book_author}&${QUERY}&${OVERVIEW_API}&{IMAGE_API}`;
+try {
+  const results = await fetch(`${urlImage}`)
+  const json = await results.json()
+  console.log(json);
+}
+for (let index = 0; index < 10; index++) {
+const bookbox = document.createElement("div");
+bookbox.classList.add("bookBox");
   async function getAuthor(book_author) {
     const url = `${DOMAIN}author=${book_author}&${QUERY}`;
     try {
       const results = await fetch(`${url}`)
       const json = await results.json()
       console.log(json);
+    }
       
 for (let index = 0; index < 10; index++) {
   const bookbox = document.createElement("div");
