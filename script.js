@@ -14,7 +14,7 @@ button.addEventListener("click", () => {
   getAuthor(bookTitle)
   
 })
-async function getAuthor(book_author) {
+async function getAuthor(book_author) { 
   const url = `${DOMAIN}author=${book_author}&${QUERY}`;
   try {
     const results = await fetch(`${url}`)
@@ -22,7 +22,7 @@ async function getAuthor(book_author) {
     console.log(json);
     const imagebox = document.querySelector('#output')
     for (let index = 0; index < json.results.length; index++) {
-    // imagebox.append(img)
+      // imagebox.append(img)
       
       const bookbox = document.createElement("div");
       bookbox.classList.add("bookBox");
@@ -33,7 +33,6 @@ async function getAuthor(book_author) {
       img.src = `https://pictures.abebooks.com/isbn/${isbn13}-us-300.jpg`
       bookbox.appendChild(img)
       
-      <break>
 
       const titleinfo = document.createElement("div")
       titleinfo.textContent = json.results[index].book_title
@@ -41,10 +40,10 @@ async function getAuthor(book_author) {
       
       const summaryinfo = document.createElement("div")
       summaryinfo.textContent = json.results[index].summary
-      bookbox.appendChild(summaryinfo)     
+      bookbox.appendChild(summaryinfo)
 
       const url = document.createElement("a")
-      url.textContent = "Read the New York Times Review Here!!!!"
+      url.textContent = "Read the New York Times Review Here"
       url.href = json.results[index].url;
       url.target = "_blank";
       bookbox.appendChild(url)
