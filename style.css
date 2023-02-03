@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 body {
-  
   background-image: url("thought-catalog-o0Qqw21-0NI-unsplash.jpg");
   background-position: center;
   background-size: cover;
@@ -36,8 +35,8 @@ button {
 
 }
 img {
-  
-  max-height: 130px ;
+max-width: 25%;
+  /* max-height: 30px ; */
   border-radius: 50%;
 }
 
