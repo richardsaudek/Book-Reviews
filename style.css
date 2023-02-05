@@ -1,8 +1,33 @@
 *{
   box-sizing: border-box;
 }
+
 @import 'https://fonts.googleapis.com/css?family=BioRhyme:700|Eczar:800|Rubik:400,400i,700';
 
+
+@media screen and (max-width: 600px) {
+  .bookBox {
+    background: rgb(242, 243, 245);
+    min-width: 350px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-content: center; */
+    align-items: center;
+    /* background-color: firebrick; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border-radius: 8px;
+    /* margin: 20px; */
+    flex-grow: 1;
+    width: 25%;
+    padding: 24px;
+    font-family: Eczar, serif;
+      font-weight: 800;
+      font-size: 1.1em;
+      color: rgb(0,200,215);
+    }
+}
 header{
   align-items: center;
 }
@@ -135,10 +160,14 @@ section {
   flex-grow: 1;
   width: 25%;
   padding: 24px;
+  font-family: Eczar, serif;
+    font-weight: 800;
+    font-size: 1.1em;
+    color: rgb(0,200,215);
 }
 .bookImg{
-  height:300px;
-  width: 200px;
+  /* max-height:200px;
+  max-width: 100px; */
   object-fit: cover;
 }
 #logo {
@@ -146,3 +175,5 @@ width: 10%;
 height: auto;
 align-items: center;
 }
+
+

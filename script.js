@@ -43,7 +43,7 @@ async function getAuthor(book_author) {
       bookbox.appendChild(summaryinfo)
 
       const url = document.createElement("a")
-      url.textContent = "Read the New York Times Review Here"
+      url.textContent = "Read the Review"
       url.href = json.results[index].url;
       url.target = "_blank";
       bookbox.appendChild(url)
@@ -63,31 +63,6 @@ if (condition) {
 } else {
   
 }
-// const authorinfo = document.createElement("div")
-// // authorinfo.textContent = json.results[index].book_author
-// bookbox.appendChild(authorinfo)
-
-
-
-// const urlinfo = document.createElement("div")
-// urlinfo.textContent = json.results[index].url
-// bookbox.appendChild(urlinfo)
-
-
-
-// function renderList(json) {
-  //   listing.innerHTML = ""
-  //   for (let movie of json.Search) {
-    //     let Title = titleinfo;
-    //     let Summary = summaryinfo
-    //     let Link = url
-    
-    //     const div = document.createElement('div');
-    //     const titleBox = document.createElement('p');
-    //     const img = document.createElement(`img`)
-    //   }
-    // }
-    
     // div.classList.add("bookBox")
     // img.classList.add('url')
     // titleBox.classList.add("titleBox")
@@ -111,22 +86,3 @@ if (condition) {
     // for (let index = 0; index < 10; index++) {
     // const bookbox = document.createElement("div");
     // bookbox.classList.add("bookBox");
-      
-    // function updateCover(id, isbn) {
-    //   fetch('https://www.googleapis.com/books/v1/volumes?q=isbn:' + isbn + "&key=AIzaSyAyINR2SYnt4K-0x6zh6S3x6NVUY15pY7Q", {
-    //     method: 'get'
-    //   })
-    //   .then(response => { return response.json(); })
-    //   .then(data => {
-    //     var img = data.items[0].volumeInfo.imageLinks.thumbnail;
-    //     img = img.replace(/^http:\/\//i, 'https://');
-    //     $('#cover-' + id).attr('src', img);
-    //   })
-    //   .catch(error => {
-    //     console.log(error);
-    //     // console.log('Googel API Error: Defaulting to archival images for book #' + id + ' ISBN: ' + isbn);
-    //     // var index = id - 1;
-    //     // var img = archivedImages[index];
-    //     // $('#cover-' + id).attr('src', img);
-    //   });
-    // }
