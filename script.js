@@ -14,7 +14,6 @@ button.addEventListener("click", () => {
   getAuthor(bookTitle)
 }
 )
-  
 async function getAuthor(book_author) {
   const url = `${DOMAIN}author=${book_author}&${QUERY}`;
   try {
@@ -41,6 +40,7 @@ async function getAuthor(book_author) {
       const img = document.createElement('img')
       img.classList.add('bookImg')
       img.src = `https://pictures.abebooks.com/isbn/${isbn13}-us-300.jpg`
+     
       // onerror= noImage()
       //   if (img === 404) {
       //     img.src = 'book-logo-modified.png'
@@ -66,9 +66,8 @@ async function getAuthor(book_author) {
       
       output.appendChild(bookbox)
 
-      
       span1.innerHTML = json.results[index].book_author
-      span1.innerHTML = ""
+
     }
   }
   catch (error) {

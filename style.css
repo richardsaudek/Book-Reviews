@@ -54,14 +54,7 @@ button {
   background-color: #3e9aa6;
   padding: 8px;
   border-radius: 14%;
-
 }
-img {
-/* max-width: 25%; */
-  /* max-height: 30px ; */
-  /* border-radius: 100%; */
-}
-
 section {
   margin-top: 400px;
   margin: 40px 0;
@@ -86,32 +79,25 @@ section {
 #output{
   display: flex;
   gap: 24px;
-  /* flex-direction: column; */
   flex-wrap: wrap;
   margin: 40px 24px;
 }
 .url{
-  /* height: 300px;
-  width: 200px;
-  object-fit: cover; */
   font-family: Eczar, serif;
     font-weight: 800;
     font-size: 1.1em;
     color: #7F7F2B;
 }
 .bookBox{
-  /* width: 90%; */
   background: rgb(242, 243, 245);
   min-height: 350px;
   font-weight: bold;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-content: center; */
   align-items: center;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   border-radius: 8px;
-  /* margin: 20px; */
   flex-grow: 1;
   width: 25%;
   padding: 24px;
@@ -137,11 +123,4 @@ section {
   font-size: 5em;
   font-weight: 700;
   color: #ff7474;
-}
-.summaryBox{
-  background-color: firebrick;
-  
-}
-.urlBox{
-
 }
