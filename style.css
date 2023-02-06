@@ -1,35 +1,16 @@
 *{
   box-sizing: border-box;
 }
-
 @import 'https://fonts.googleapis.com/css?family=BioRhyme:700|Eczar:800|Rubik:400,400i,700';
-
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 950px) {
   .bookBox {
     background: rgb(242, 243, 245);
     min-width: 350px;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* align-content: center; */
-    align-items: center;
-    /* background-color: firebrick; */
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    border-radius: 8px;
-    /* margin: 20px; */
-    flex-grow: 1;
-    width: 25%;
-    padding: 24px;
-    font-family: Eczar, serif;
-      font-weight: 800;
-      font-size: 1.1em;
-      color: rgb(0,200,215);
     }
 }
 header{
   align-items: center;
+  height: 550px;
 }
 body {
   background-image: url("thought-catalog-o0Qqw21-0NI-unsplash.jpg");
@@ -44,23 +25,14 @@ body {
   font-weight: 400;
 }
 h1 {
-  /* size: 120%; */
-  /* font-family: 'BioRhyme', serif;
-    font-size: 5em;
-    font-weight: 700;
-    color: #ff7474; */
     font-family: 'BioRhyme', serif;
     font-size: 5em;
     font-weight: 700;
     color: #ff7474;
 }
-div2 {
-  margin: 0 20%;
-
-}
 h2 {
   font-weight: bolder;
-  /* background-color: #fcfce1; */
+  background-color: rgb(242, 243, 245);
   font-family: Eczar, serif;
   font-weight: 800;
   font-size: 2em;
@@ -94,11 +66,6 @@ section {
   margin-top: 400px;
   margin: 40px 0;
 }
-
-/* div {
-  background-color: antiquewhite;
-} */
-
 .search-section {
   display: flex;
   justify-content: center;
@@ -115,7 +82,6 @@ section {
   justify-content: center;
   row-gap: 10px;
   column-gap: 10px;
-
 }
 #output{
   display: flex;
@@ -124,16 +90,6 @@ section {
   flex-wrap: wrap;
   margin: 40px 24px;
 }
-/* .bookBox {
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
-  padding: 10px;
-  justify-content: center;
-  align-items: center;
-  width: 250px;
-  
-} */
 .url{
   /* height: 300px;
   width: 200px;
@@ -153,7 +109,6 @@ section {
   justify-content: center;
   /* align-content: center; */
   align-items: center;
-  /* background-color: firebrick; */
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   border-radius: 8px;
   /* margin: 20px; */
@@ -164,16 +119,29 @@ section {
     font-weight: 800;
     font-size: 1.1em;
     color: rgb(0,200,215);
+    line-height: 175%;
+  
 }
 .bookImg{
-  /* max-height:200px;
-  max-width: 100px; */
   object-fit: cover;
+  height: 200;
+  
 }
 #logo {
-width: 10%;
-height: auto;
-align-items: center;
+  width: 10%;
+  height: auto;
+  align-items: center;
 }
+.titleBox{
+  font-family: 'BioRhyme', serif;
+  font-size: 5em;
+  font-weight: 700;
+  color: #ff7474;
+}
+.summaryBox{
+  background-color: firebrick;
+  
+}
+.urlBox{
 
-
+}

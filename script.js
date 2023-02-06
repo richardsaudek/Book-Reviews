@@ -12,9 +12,10 @@ const output = document.querySelector('#output')
 button.addEventListener("click", () => {
   const bookTitle = document.getElementById("input").value;
   getAuthor(bookTitle)
+}
+)
   
-})
-async function getAuthor(book_author) { 
+async function getAuthor(book_author) {
   const url = `${DOMAIN}author=${book_author}&${QUERY}`;
   try {
     const results = await fetch(`${url}`)
@@ -26,13 +27,26 @@ async function getAuthor(book_author) {
       
       const bookbox = document.createElement("div");
       bookbox.classList.add("bookBox");
-      
+
+      const titlebox = document.createElement("div");
+      titlebox.classList.add("titleBox");
+
+      const summarybox = document.createElement("div");
+      summarybox.classList.add("summaryBox");
+
+      const urlbox = document.createElement("div");
+      urlbox.classList.add("urlBox");
+
       const isbn13 = json.results[index].isbn13[0]
       const img = document.createElement('img')
       img.classList.add('bookImg')
       img.src = `https://pictures.abebooks.com/isbn/${isbn13}-us-300.jpg`
-      bookbox.appendChild(img)
+      // onerror= noImage()
+      //   if (img === 404) {
+      //     img.src = 'book-logo-modified.png'
+      //   } 
       
+      bookbox.appendChild(img)
 
       const titleinfo = document.createElement("div")
       titleinfo.textContent = json.results[index].book_title
@@ -42,6 +56,7 @@ async function getAuthor(book_author) {
       summaryinfo.textContent = json.results[index].summary
       bookbox.appendChild(summaryinfo)
 
+
       const url = document.createElement("a")
       url.textContent = "Read the Review"
       url.href = json.results[index].url;
@@ -50,39 +65,12 @@ async function getAuthor(book_author) {
       
       
       output.appendChild(bookbox)
+
       
       span1.innerHTML = json.results[index].book_author
-      //updateCover()
+      span1.innerHTML = ""
     }
   }
   catch (error) {
   }
 }
-if (condition) {
-  
-} else {
-  
-}
-    // div.classList.add("bookBox")
-    // img.classList.add('url')
-    // titleBox.classList.add("titleBox")
-    
-    // titleBox.textContent = `${Title} ${releaseYear}`
-    // img.src = `${Poster}`
-    // listing.append(div);
-    // div.appendChild(img);
-    // div.appendChild(titleBox);
-    
-    
-    
-    
-    // async function getBookImage(list_image)
-    // const image = `${DOMAIN}image=${list_image}&${QUERY}`;
-    // try {
-    //   const results = await fetch(`${urlImage}`)
-    //   const json = await results.json()
-    //   console.log(json);
-    // }
-    // for (let index = 0; index < 10; index++) {
-    // const bookbox = document.createElement("div");
-    // bookbox.classList.add("bookBox");

@@ -27,9 +27,9 @@ GET {{base}}/lists/hardcover-fiction.json{{query}}
 #### MVP 
 
 - Find and use external api 
-- Render data on page 
-- Allow user to search by book title
-- Display results 
+- Render results on page 
+- Allow user to search by author name
+- Display book image/title/summary with URL to book review 
 
 #### PostMVP  
 
