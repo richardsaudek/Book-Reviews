@@ -34,6 +34,8 @@ GET {{base}}/lists/hardcover-fiction.json{{query}}
 #### PostMVP  
 
 - Allow for different search capabilities 
+- Search results include links to buy books
+
 
 
 ## Project Schedule

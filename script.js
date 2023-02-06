@@ -20,9 +20,9 @@ async function getAuthor(book_author) {
     const results = await fetch(`${url}`)
     const json = await results.json()
     console.log(json);
+    output.innerHTML=""
     const imagebox = document.querySelector('#output')
     for (let index = 0; index < json.results.length; index++) {
-      // imagebox.append(img)
       
       const bookbox = document.createElement("div");
       bookbox.classList.add("bookBox");
@@ -40,12 +40,7 @@ async function getAuthor(book_author) {
       const img = document.createElement('img')
       img.classList.add('bookImg')
       img.src = `https://pictures.abebooks.com/isbn/${isbn13}-us-300.jpg`
-     
-      // onerror= noImage()
-      //   if (img === 404) {
-      //     img.src = 'book-logo-modified.png'
-      //   } 
-      
+           
       bookbox.appendChild(img)
 
       const titleinfo = document.createElement("div")
@@ -67,7 +62,6 @@ async function getAuthor(book_author) {
       output.appendChild(bookbox)
 
       span1.innerHTML = json.results[index].book_author
-
     }
   }
   catch (error) {
